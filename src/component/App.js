@@ -36,13 +36,27 @@ class Menu extends Component {
         })
     }
     render() {
+        const style={
+            width:"100px",
+            background: "#f8585b",
+            border: "none",      
+            color:"#fff",     
+            padding: "15px 0",        
+            display: "inline-block",
+            fontSize: "15px",
+            margin: "4px",
+            cursor: "pointer",
+            borderRadius:'10px',
+        }
         return (
             <div>
                 <h1>메뉴고르기</h1>
-                <p>{this.state.menu} </p>
-                <button onClick={this.clickFood}>음식 종류 선택 :)</button>
+                <p>종류: {this.state.menu} </p>
+                
+                <button style={style} onClick={this.clickFood}>음식 종류 선택 Click me:)</button>
                 <h2>{this.state.menu[this.state.cnt]} </h2>
-                <button onClick={this.clickWho}>음식 고르실 분~!</button>
+                <h2>종류말고! 누가 고를지 정하기~!</h2>
+                <button style={style} onClick={this.clickWho}>음식 고르실 분 Click me~!</button>
                 <h2>{this.state.people[this.state.cnt2]} </h2>
             </div>
         );
